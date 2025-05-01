@@ -36,7 +36,7 @@ const PrimaryPage = () => {
           рятуєм світ
         </p>
         <h1 className="text-[32px] font-bold drop-shadow-2xl text-[#30234F] mb-8" style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.2)" }}>
-          ВСІМ ДОБРИЙ ДЕНЬ!
+          ВСІМ ДОБРИЙ ДЕНЬ! Test
         </h1>
         <button className="flex w-[85%] items-center text-[25px] font-bold justify-between gap-2 px-6 py-5 bg-[#0D0A26] text-white rounded-4xl hover:bg-[#1b1839] transition">
           ГАЙДА З НАМИ!
