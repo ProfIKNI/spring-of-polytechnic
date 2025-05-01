@@ -1,4 +1,4 @@
-import UnionIcon from "../assets/Union.png";
+import UnionIcon from "../assets/union.png";
 import RocketImg from "../assets/rocket.png";
 import ShadowImg from "../assets/shadow.png";
 import BackgroundGif from "../assets/high_quality_animated_planets.gif";
