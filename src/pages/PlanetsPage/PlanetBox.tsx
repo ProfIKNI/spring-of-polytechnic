@@ -2,24 +2,22 @@ import {Planet} from "../../data/planets.ts";
 
 const PlanetBox = ({ name, description, img, align }: Planet) =>{
     return (
-        <div className="relative text-white flex">
+        <div className="relative text-white flex max-w-96 m-auto">
             <img
                 src={img}
                 alt={name}
-                className={`${align === 'right' ? 'ml-auto' : 'mr-auto'}`}
+                className={`${align === 'right' ? 'ml-auto' : 'mr-auto'} planet`}
             />
 
             <div
                 className={`
-                    absolute top-0 h-full flex flex-col justify-center
-                    ${align === 'right' ? 'right-0 pr-[43%]' : 'left-0 pl-[43%]'}
+                    absolute h-full flex flex-col justify-center break-all
+                    ${align === 'right' ? 'text-right right-0 mr-[40%] ml-3' : 'text-left left-0 ml-[40%] mr-3'}
                 `}
             >
-                <div className={`${align === 'right' ? 'text-right pl-3' : 'text-left pr-3'}`}>
                     <h1 className={`text-[32px] font-bold`}>{name}</h1>
                     <h6 className="text-[12px] font-bold text-center">Опис планети:</h6>
                     <p className="text-[11px]">{description}</p>
-                </div>
             </div>
         </div>
 
