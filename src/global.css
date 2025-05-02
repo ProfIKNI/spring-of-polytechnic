@@ -1,24 +1,14 @@
 @import "tailwindcss";
 
-@keyframes moveRocket {
-    0% {
-      transform: translateX(0); 
-    }
-    25% {
-      transform: translateX(15px); 
-    }
-    50% {
-      transform: translateX(-10px); 
-    }
-    75% {
-      transform: translateX(15px); 
-    }
-    100% {
-      transform: translateX(0); 
-    }
+@keyframes marquee {
+  0% {
+    transform: translateX(-50%);
   }
-  
-  .rocket {
-    animation: moveRocket 4s ease-in-out infinite; 
+  100% {
+    transform: translateX(0%);
   }
-  
+}
+
+.animate-marquee {
+  animation: marquee 5s linear infinite;
+}

@@ -3,10 +3,16 @@ import RocketImg from "../assets/rocket.png";
 import ShadowImg from "../assets/shadow.png";
 import BackgroundGif from "../assets/high_quality_animated_planets.gif";
 import useMobile from "../hooks/useMobile";
+import { useNavigate } from 'react-router-dom';
 
 const PrimaryPage = () => {
 
 	const isMobile = useMobile()
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/spring-of-polytechnic/buy-ticket')
+  }
 
 	if (!isMobile) {
     return (
@@ -25,10 +31,10 @@ const PrimaryPage = () => {
 
   return (
     <div
-      className="relative min-h-screen w-full bg-cover bg-center bg-fixed"
+      className="relative min-h-screen w-full bg-cover bg-center bg-fixed h-screen overflow-hidden"
       style={{ backgroundImage: `url(${BackgroundGif})` }}
     >
-      <div className="absolute inset-0 flex flex-col items-center justify-end pb-12 z-10 text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-end pb-4 z-10 text-center">
         <p className="text-[24px] text-[#30234F]" style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.2)" }}>
           І в темну ніч, і в білий день
         </p>
@@ -38,7 +44,7 @@ const PrimaryPage = () => {
         <h1 className="text-[32px] font-bold drop-shadow-2xl text-[#30234F] mb-8" style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.2)" }}>
           ВСІМ ДОБРИЙ ДЕНЬ!
         </h1>
-        <button className="flex w-[85%] items-center text-[25px] font-bold justify-between gap-2 px-6 py-5 bg-[#0D0A26] text-white rounded-4xl hover:bg-[#1b1839] transition">
+        <button onClick={handleClick} className="flex w-[85%] items-center text-[25px] font-bold justify-between gap-2 px-6 py-5 bg-[#0D0A26] text-white rounded-4xl hover:bg-[#1b1839] transition">
           ГАЙДА З НАМИ!
           <img src={UnionIcon} alt="icon" className="h-5 w-auto align-right" />
         </button>
@@ -50,7 +56,7 @@ const PrimaryPage = () => {
 			<img
           src={RocketImg}
           alt="Rocket"
-          className="pt-10 pl-10 rocket"
+          className="ml-26 pt-6 rocket"
         />
     </div>
   );
