@@ -1,76 +1,34 @@
-import { useEffect, useRef, useState } from "react";
 import useMobile from "../hooks/useMobile";
 
-import robotFull from "../assets/robot1.png";
-import robotOverlay from "../assets/robot2.png";
-import Background from "../assets/hologram_page_back.png";
+import robotFull from "../assets/hologram-unscreen.gif";
+import Background from "../assets/hologram_back.png";
 import UnionIcon from "../assets/union_black.png";
+import planet1 from "..//assets/hologram_planet_1.png";
+import planet2 from "..//assets/hologram_planet_2.png";
 
 const TalkingHologram = () => {
-  const [showOverlay, setShowOverlay] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowOverlay((prev) => !prev);
-    }, 400);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="relative w-[350px] z-10">
-      <img src={robotFull} alt="Голограма" className="w-full" />
-      {showOverlay && (
-        <img
-          src={robotOverlay}
-          alt="Деталі"
-          className="absolute top-0 left-0 w-full opacity-100 pointer-events-none"
-        />
-      )}
+    <div className="relative w-[500px] z-10 mt-10">
+      <img src={`${robotFull}?v=${Date.now()}`} alt="Голограма" className="w-full" />
     </div>
   );
 };
 
 const ScrollingText = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [autoScrollEnded, setAutoScrollEnded] = useState(false);
-
-  useEffect(() => {
-    const textElement = containerRef.current;
-    if (!textElement) return;
-
-    const handleAnimationEnd = () => {
-      setAutoScrollEnded(true);
-    };
-
-    textElement.addEventListener("animationend", handleAnimationEnd);
-
-    return () => {
-      textElement.removeEventListener("animationend", handleAnimationEnd);
-    };
-  }, []);
-
   return (
-    <div
-      className={`relative h-[400px] w-full max-w-md bg-none bg-opacity-40 rounded-md text-white text-sm leading-6 ${
-        autoScrollEnded ? "overflow-y-auto" : "overflow-hidden"
-      }`}
-    >
-      <div
-        ref={containerRef}
-        className={`w-full px-4 py-2 ${
-          autoScrollEnded ? "" : "animate-scroll-text"
-        }`}
-        style={{ position: "absolute", top: autoScrollEnded ? "30%" : "0%" }}
-      >
-        <p className="text-[12px] text-center text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          Dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+    <div className="relative h-[500px] w-full max-w-md mx-auto overflow-hidden text-white text-sm leading-6">
+      <div className="absolute w-full h-full flex justify-center">
+        <div className="w-[80%] animate-scroll-text text-center leading-[1.6] text-[2rem]">
+          <p className="text-[1.5rem] mb-4">Episode IV</p>
+          <h1 className="text-[3rem] mb-6">A NEW HOPE</h1>
+          <p>
+            It is a period of civil war. Rebel spaceships, striking from a hidden base,
+            have won their first victory against the evil Galactic Empire.
+            During the battle, Rebel spies managed to steal secret plans to the Empire’s
+            ultimate weapon, the DEATH STAR, an armored space station with enough power
+            to destroy an entire planet.
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -95,17 +53,24 @@ const HologramPage = () => {
       className="relative min-h-screen w-full bg-cover bg-center flex flex-col items-center justify-between pb-6 px-4"
       style={{ backgroundImage: `url(${Background})` }}
     >
-     <div className="relative w-[350px] h-[600px]">
+     <div className="relative w-[500px] h-[650px]">
     {/* Текст ПОЗАДУ */}
-    <div className="absolute bottom-0 left-0 w-full z-0">
+    <div className="absolute bottom-0 left-0 w-full z-5">
       <ScrollingText />
     </div>
 
     {/* Голограма ПОВЕРХ */}
     <div className="absolute top-0 left-0 w-full z-10 pointer-events-none">
       <TalkingHologram />
-    </div>
-  </div>
+        </div>
+        
+      </div>
+      <div className="absolute top-[35%] right-0 w-[180px] h-[180px] z-0 pointer-events-none">
+          <img src={planet1} alt="" className="w-full" />
+          </div>
+          <div className="absolute top-0 left-0 w-[140px] h-[140px] z-0 pointer-events-none">
+          <img src={planet2} alt="" className="w-full" />
+          </div>
 
       {/* Кнопка */}
       <button className="flex w-[324px] h-[76px] items-center text-[25px] font-bold justify-between gap-2 px-6 py-5 bg-[#D9D9D9] text-[#0D0A26] cursor-pointer rounded-[30px] hover:bg-[#9A9A9A] transition">

@@ -23,14 +23,14 @@
   }
 @keyframes scroll-text {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(105%);
   }
 
   100% {
-    transform: translateY(40%);
+    transform: translateY(-170%);
   }
 }
 
 .animate-scroll-text {
-  animation: scroll-text 30s linear forwards;
+  animation: scroll-text 60s linear infinite;
 }
