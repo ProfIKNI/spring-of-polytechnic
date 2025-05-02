@@ -1,9 +1,9 @@
 
-import PrimaryPage from "./pages/PrimaryPage";
-
+// import PrimaryPage from "./pages/PrimaryPage";
+import PlanetsPage  from "./pages/PlanetsPage/PlanetsPage.tsx";
 const App = () => {
   return (
-    <PrimaryPage />
+    < PlanetsPage/>
   );
 }
 

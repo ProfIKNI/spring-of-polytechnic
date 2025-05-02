@@ -1,5 +1,6 @@
 import useMobile from "../../hooks/useMobile.tsx";
-import Background from "../../assets/stars_black_background.png";
+// import Background from "../../assets/stars_black_background.png";
+import Background from "../../assets/stars-back.png";
 import { planets } from '../../data/planets.ts';
 import PlanetBox from "./PlanetBox.tsx";
 
