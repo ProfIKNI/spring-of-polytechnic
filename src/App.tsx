@@ -1,4 +1,3 @@
-
 import PrimaryPage from "./pages/PrimaryPage";
 
 const App = () => {
