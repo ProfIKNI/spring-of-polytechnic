@@ -17,10 +17,9 @@ const TalkingHologram = () => {
 const ScrollingText = () => {
   return (
     <div className="relative h-[500px] w-full max-w-md mx-auto overflow-hidden text-white text-sm leading-6">
-  {/* Fade Top */}
+ 
   <div className="pointer-events-none absolute top-0 left-0 w-full h-16 z-10 bg-gradient-to-b from-[#000] to-transparent"></div>
 
-  {/* Fade Bottom */}
   <div className="pointer-events-none absolute bottom-0 left-0 w-full h-16 z-10 bg-gradient-to-t from-[#000] to-transparent"></div>
 
   <div className="absolute w-full h-full flex justify-center">
@@ -59,13 +58,12 @@ const HologramPage = () => {
       className="relative min-h-screen w-full bg-cover bg-center flex flex-col items-center justify-between pb-6 px-4"
       style={{ backgroundImage: `url(${Background})` }}
     >
-     <div className="relative w-[500px] h-[650px]">
-    {/* Текст ПОЗАДУ */}
+      <div className="relative w-[500px] h-[650px]">
+        
     <div className="absolute bottom-0 left-0 w-full z-5">
       <ScrollingText />
     </div>
 
-    {/* Голограма ПОВЕРХ */}
     <div className="absolute top-0 left-0 w-full z-10 pointer-events-none">
       <TalkingHologram />
         </div>
@@ -78,7 +76,6 @@ const HologramPage = () => {
           <img src={planet2} alt="" className="w-full" />
           </div>
 
-      {/* Кнопка */}
       <button className="flex w-[324px] h-[76px] items-center text-[25px] font-bold justify-between gap-2 px-6 py-5 bg-[#D9D9D9] text-[#0D0A26] cursor-pointer rounded-[30px] hover:bg-[#9A9A9A] transition">
           ЩО ТРАПИЛОСЬ
           <img src={UnionIcon} alt="icon" className="h-5 w-auto align-right" />
