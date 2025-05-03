@@ -17,20 +17,26 @@ const TalkingHologram = () => {
 const ScrollingText = () => {
   return (
     <div className="relative h-[500px] w-full max-w-md mx-auto overflow-hidden text-white text-sm leading-6">
-      <div className="absolute w-full h-full flex justify-center">
-        <div className="w-[80%] animate-scroll-text text-center leading-[1.6] text-[2rem]">
-          <p className="text-[1.5rem] mb-4">Episode IV</p>
-          <h1 className="text-[3rem] mb-6">A NEW HOPE</h1>
-          <p>
-            It is a period of civil war. Rebel spaceships, striking from a hidden base,
-            have won their first victory against the evil Galactic Empire.
-            During the battle, Rebel spies managed to steal secret plans to the Empire’s
-            ultimate weapon, the DEATH STAR, an armored space station with enough power
-            to destroy an entire planet.
-          </p>
-        </div>
-      </div>
+  {/* Fade Top */}
+  <div className="pointer-events-none absolute top-0 left-0 w-full h-16 z-10 bg-gradient-to-b from-[#000] to-transparent"></div>
+
+  {/* Fade Bottom */}
+  <div className="pointer-events-none absolute bottom-0 left-0 w-full h-16 z-10 bg-gradient-to-t from-[#000] to-transparent"></div>
+
+  <div className="absolute w-full h-full flex justify-center">
+    <div className="w-[80%] animate-scroll-text text-center leading-[1.6] text-[1rem]">
+      <p className="text-[1.5rem] mb-4">Episode IV</p>
+      <h1 className="text-[3rem] mb-6">A NEW HOPE</h1>
+          <p >It is a period of civil war.{/*className="text-[16px]"*/}
+        It is a period of civil war. Rebel spaceships, striking from a hidden base,
+        have won their first victory against the evil Galactic Empire.
+        During the battle, Rebel spies managed to steal secret plans to the Empire’s
+        ultimate weapon, the DEATH STAR, an armored space station with enough power
+        to destroy an entire planet.
+      </p>
     </div>
+  </div>
+</div>
   );
 };
 
@@ -68,7 +74,7 @@ const HologramPage = () => {
       <div className="absolute top-[35%] right-0 w-[180px] h-[180px] z-0 pointer-events-none">
           <img src={planet1} alt="" className="w-full" />
           </div>
-          <div className="absolute top-0 left-0 w-[140px] h-[140px] z-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-[140px] h-[140px] z-15 pointer-events-none">
           <img src={planet2} alt="" className="w-full" />
           </div>
 

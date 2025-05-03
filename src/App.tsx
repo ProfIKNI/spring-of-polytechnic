@@ -1,5 +1,5 @@
+import PrimaryPage from "./pages/PrimaryPage";
 
-import PrimaryPage from "./pages/HologramPage";
 
 const App = () => {
   return (

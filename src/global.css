@@ -21,16 +21,17 @@
   .rocket {
     animation: moveRocket 4s ease-in-out infinite; 
   }
-@keyframes scroll-text {
-  0% {
-    transform: translateY(105%);
-  }
-
-  100% {
-    transform: translateY(-170%);
-  }
-}
-
-.animate-scroll-text {
-  animation: scroll-text 60s linear infinite;
-}
+  
+    @keyframes scroll-text {
+      0% {
+        transform: translateY(100%);
+      }
+  
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  
+    .animate-scroll-text {
+      animation: scroll-text 60s linear infinite;
+    }
