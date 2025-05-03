@@ -1,7 +1,8 @@
 import PrimaryPage from "./pages/PrimaryPage";
+
 const App = () => {
   return (
-    < PrimaryPage/>
+    <PrimaryPage/>
   );
 }
 
