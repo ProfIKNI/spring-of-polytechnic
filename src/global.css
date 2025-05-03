@@ -12,3 +12,17 @@
 .animate-marquee {
   animation: marquee 5s linear infinite;
 }
+
+@font-face {
+  font-family: 'Play-Bold';
+  src: url('data/Play-Bold.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Play-Regular';
+  src: url('data/Play-Regular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
