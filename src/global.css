@@ -1,28 +1,15 @@
 @import "tailwindcss";
 
-@keyframes moveRocket {
-    0% {
-      transform: translateX(0); 
-    }
-    25% {
-      transform: translateX(15px); 
-    }
-    50% {
-      transform: translateX(-10px); 
-    }
-    75% {
-      transform: translateX(15px); 
-    }
-    100% {
-      transform: translateX(0); 
-    }
+@keyframes marquee {
+  0% {
+    transform: translateX(-50%);
   }
-  
-  .rocket {
-    animation: moveRocket 4s ease-in-out infinite; 
+  100% {
+    transform: translateX(0%);
   }
-  
-    @keyframes scroll-text {
+}
+
+ @keyframes scroll-text {
       0% {
         transform: translateY(100%);
       }
@@ -35,3 +22,21 @@
     .animate-scroll-text {
       animation: scroll-text 60s linear infinite;
     }
+
+.animate-marquee {
+  animation: marquee 5s linear infinite;
+}
+
+@font-face {
+  font-family: 'Play-Bold';
+  src: url('data/Play-Bold.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Play-Regular';
+  src: url('data/Play-Regular.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
