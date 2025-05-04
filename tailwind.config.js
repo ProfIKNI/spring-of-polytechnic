@@ -12,6 +12,10 @@ module.exports = {
             '100%': { transform: 'translateX(0)' },
           },
         },
+        fontFamily: {
+          playFont: ['Play', 'sans-serif'],
+          playBoldFont: ['Play-Bold', 'sans-serif']
+        },
       },
     },
     plugins: [],
