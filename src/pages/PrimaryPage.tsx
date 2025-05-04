@@ -10,7 +10,7 @@ const PrimaryPage = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/spring-of-polytechnic/buy-ticket");
+    navigate("/spring-of-polytechnic/hologram");
   };
 
   if (!isMobile) {

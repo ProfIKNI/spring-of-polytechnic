@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./global.css";
 import App from "./App.tsx";
 import BuyTicketPage from "./pages/BuyTicketPage.tsx";
+import HologramPage from "./pages/HologramPage.tsx";
 import PlanetsPage from "./pages/PlanetsPage/PlanetsPage.tsx";
 import MainMenuPage from "./pages/MainMenuPage.tsx";
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/spring-of-polytechnic/buy-ticket",
     element: <BuyTicketPage />,
+  },
+  {
+    path: "/spring-of-polytechnic/hologram",
+    element: <HologramPage />,
   },
   {
     path: "/spring-of-polytechnic/planets",
