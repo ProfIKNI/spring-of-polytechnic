@@ -20,6 +20,8 @@ const router = createBrowserRouter([
   {
     path: "/spring-of-polytechnic/hologram",
     element: <HologramPage />,
+  },
+  {
     path: "/spring-of-polytechnic/planets",
     element: <PlanetsPage />,
   },
