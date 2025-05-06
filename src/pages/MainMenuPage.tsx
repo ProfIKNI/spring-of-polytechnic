@@ -10,7 +10,7 @@ import DateIcon from '../assets/date_icon.png'
 const MainMenuPage = () => {
     const isMobile = useMobile();
     const genre = 'комедія';
-    const duration = '';
+    const duration = 'година';
     const date = '15 травня 2025 року';
 
     if (!isMobile){
