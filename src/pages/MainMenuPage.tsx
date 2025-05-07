@@ -3,9 +3,15 @@ import Background from "../assets/stars_black_background.png";
 import planetWithMountains from "../assets/planet-mountains-background.png"
 import {DetailedIcons} from "../data/detailedIcons.ts";
 import MainMenuNavButton from "./MainMenuNavButton.tsx";
+import GenreIcon from '../assets/genre_icon.png'
+import DurationIcon from '../assets/duration_icon.png'
+import DateIcon from '../assets/date_icon.png'
 
 const MainMenuPage = () => {
     const isMobile = useMobile();
+    const genre = 'комедія';
+    const duration = 'година';
+    const date = '15 травня 2025 року';
 
     if (!isMobile){
         //some code
@@ -21,10 +27,30 @@ const MainMenuPage = () => {
         >
             <img src={planetWithMountains} alt="planets" className="w-full"/>
 
-            <div className={`absolute ${window.innerHeight >= 800 ? "bottom-36" : "bottom-5"} w-full flex flex-wrap justify-center gap-4`}>
-                {DetailedIcons.map((icon, index) => (
-                    <MainMenuNavButton key={index} {...icon} />
-                ))}
+            <div className={`absolute w-full flex flex-col justify-center bottom-5 min-h-fit px-14`}>
+
+                <div className={`w-auto flex flex-col justify-center gap-4 mb-14 p-6 px-4 p min-h-fit rounded-[20%] bg-white/50 shadow-[0px_4px_8.7px_5px_rgba(255,255,255,0.25)]`}>
+                    <div className={`w-fit flex items-end gap-4 font-playFont`}>
+                        <img src={GenreIcon} alt={'img'} className={`h-[25px]`}/>
+                        <h1 className={`uppercase w-fit text-[13px]`}>жанр: <span className={`text-[21px]`}>{genre}</span></h1>
+                    </div>
+                    <div className={`w-fit flex items-end gap-4 font-playFont`}>
+                        <img src={DurationIcon} alt={'img'} className={`h-[25px]`}/>
+                        <p className={`uppercase w-fit text-[13px]`}>тривалість: <span className={`text-[21px]`}>{duration}</span> </p>
+                    </div>
+                    <div className={`w-fit flex items-center gap-4 font-playFont`}>
+                        <img src={DateIcon} alt={'img'} className={`h-[25px]`}/>
+                        <h1 className={`uppercase w-fit text-[13px]`}>прем'єра: <span className={`text-[21px]`}>{date}</span></h1>
+                    </div>
+                </div>
+
+                <div
+                    className={`w-full flex flex-wrap justify-between`}>
+                    {DetailedIcons.map((icon, index) => (
+                        <MainMenuNavButton key={index} {...icon} />
+                    ))}
+                </div>
+
             </div>
 
         </div>
