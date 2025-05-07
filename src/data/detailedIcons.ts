@@ -18,7 +18,7 @@ export const DetailedIcons: DetailedIcon[] = [
     {
         title: "КОМІКС",
         icon: detailedStarts,
-        route: "/"
+        route: "/spring-of-polytechnic/comics"
     },
     {
         title: "ПЛАНЕТИ",
