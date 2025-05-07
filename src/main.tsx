@@ -6,7 +6,8 @@ import App from "./App.tsx";
 import BuyTicketPage from "./pages/BuyTicketPage.tsx";
 import HologramPage from "./pages/HologramPage.tsx";
 import PlanetsPage from "./pages/PlanetsPage/PlanetsPage.tsx";
-import MainMenuPage from "./pages/MainMenuPage.tsx";
+import MainMenuPage from "./pages/MainMenuPage/MainMenuPage.tsx";
+import ComicsPage from "./pages/ComicsPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/spring-of-polytechnic/main-menu",
     element: <MainMenuPage />,
+  },
+  {
+    path: "/spring-of-polytechnic/comics",
+    element: <ComicsPage />,
   },
 ]);
 
