@@ -17,7 +17,7 @@ const ComicsPage = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-black select-none">
+            <div className="min-h-screen bg-black select-none font-playFont">
 
                 {pages.map((item, index) => (
                     index <= activePart ?
