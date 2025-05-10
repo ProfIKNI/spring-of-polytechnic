@@ -1,9 +1,8 @@
-import PrimaryPage from "./pages/PrimaryPage";
-
+import MainMenuPage from "./pages/MainMenuPage/MainMenuPage";
 
 const App = () => {
   return (
-    <PrimaryPage />
+    <MainMenuPage />
   );
 }
 
