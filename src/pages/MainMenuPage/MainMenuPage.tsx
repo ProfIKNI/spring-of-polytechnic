@@ -1,23 +1,17 @@
-import useMobile from "../../hooks/useMobile.tsx";
 import Background from "../../assets/stars_black_background.png";
 import planetWithMountains from "../../assets/planet-mountains-background.png"
 import {DetailedIcons} from "../../data/detailedIcons.ts";
 import MainMenuNavButton from "./MainMenuNavButton.tsx";
-import GenreIcon from '../../assets/genre_icon.png'
-import DurationIcon from '../../assets/duration_icon.png'
-import DateIcon from '../../assets/date_icon.png'
+// import GenreIcon from '../../assets/genre_icon.png'
+// import DurationIcon from '../../assets/duration_icon.png'
+// import DateIcon from '../../assets/date_icon.png'
 
 const MainMenuPage = () => {
-    const isMobile = useMobile();
     const genre = 'комедія';
     const duration = 'година';
     const date = '15 травня 2025 року';
 
-    if (!isMobile){
-        //some code
-    }
-
-    return(
+    return (
         <div
             className="m-0 p-0 w-full min-h-screen z-0 bg-repeat"
             style={{
@@ -64,9 +58,7 @@ const MainMenuPage = () => {
                         <MainMenuNavButton key={index} {...icon} />
                     ))}
                 </div>
-
             </div>
-
         </div>
     );
 };
