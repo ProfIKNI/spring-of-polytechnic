@@ -22,12 +22,15 @@ import PcPage3Part3 from "../assets/comics_pc_page_3_part_03.png";
 import PcPage3Part4 from "../assets/comics_pc_page_3_part_04.png";
 
 export interface ComicsPage {
-    img: string;
+    img?: string;
     animated?: string;
     cursor?: string;
 }
 
 export const PhoneComicsPages: ComicsPage[] =[
+    {
+        cursor: "top-1/5 left-1/5"
+    },
     {
         img: PhonePage1Part1,
         cursor: "top-1/5 right-1/5"
@@ -69,6 +72,9 @@ export const PhoneComicsPages: ComicsPage[] =[
 ]
 
 export const PcComicsPages: ComicsPage[] =[
+    {
+        cursor: "top-1/5 left-1/5"
+    },
     {
         img: PcPage1Part1,
         cursor: "top-3/5 left-1/5"
