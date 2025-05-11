@@ -25,27 +25,41 @@ const MainMenuPage = () => {
                 backgroundSize: 'auto'
             }}
         >
-            <img src={planetWithMountains} alt="planets" className="w-full"/>
+            <img
+                src={planetWithMountains}
+                alt="planets"
+                className="w-screen h-screen object-cover"
+            />
 
             <div className={`absolute w-full flex flex-col justify-center bottom-5 min-h-fit px-14`}>
 
-                <div className={`w-auto flex flex-col justify-center gap-4 mb-14 p-6 px-4 p min-h-fit rounded-[2rem] bg-white/50 shadow-[0px_4px_8.7px_5px_rgba(255,255,255,0.25)]`}>
+                <div
+                    className={`w-auto flex flex-col font-bold ${innerWidth >= 390 ? "text-[21px]" : "text-[18px]"} justify-center gap-1 text-white mb-10 p-6 px-4 p min-h-fit rounded-[2rem] bg-white/50 shadow-[0px_4px_8.7px_5px_rgba(255,255,255,0.25)]`}
+                    style={{
+                        textShadow: '0px 4px 4px rgba(0,0,0,0.25)',
+                    }}
+                >
                     <div className={`w-fit flex items-end gap-4 font-playFont`}>
-                        <img src={GenreIcon} alt={'img'} className={`h-[25px]`}/>
-                        <h1 className={`uppercase w-fit text-[13px]`}>жанр: <span className={`text-[21px]`}>{genre}</span></h1>
+                        {/*<img src={GenreIcon} alt={'img'} className={`h-[25px]`}/>*/}
+                        <h1
+                            className={`uppercase w-fit`}
+                        >жанр:
+                            <span className={`font-normal`}> {genre}</span></h1>
                     </div>
                     <div className={`w-fit flex items-end gap-4 font-playFont`}>
-                        <img src={DurationIcon} alt={'img'} className={`h-[25px]`}/>
-                        <p className={`uppercase w-fit text-[13px]`}>тривалість: <span className={`text-[21px]`}>{duration}</span> </p>
+                        {/*<img src={DurationIcon} alt={'img'} className={`h-[25px]`}/>*/}
+                        <p className={`uppercase w-fit`}>тривалість:
+                            <span className={`font-normal`}> {duration}</span></p>
                     </div>
                     <div className={`w-fit flex items-center gap-4 font-playFont`}>
-                        <img src={DateIcon} alt={'img'} className={`h-[25px]`}/>
-                        <h1 className={`uppercase w-fit text-[13px]`}>прем'єра: <span className={`text-[21px]`}>{date}</span></h1>
+                        {/*<img src={DateIcon} alt={'img'} className={`h-[25px]`}/>*/}
+                        <h1 className={`uppercase w-fit`}>прем'єра:<br/>
+                            <span className={`font-normal`}>{date}</span></h1>
                     </div>
                 </div>
 
                 <div
-                    className={`w-full flex flex-wrap justify-between`}>
+                    className={`w-full flex flex-wrap justify-between mb-8`}>
                     {DetailedIcons.map((icon, index) => (
                         <MainMenuNavButton key={index} {...icon} />
                     ))}
