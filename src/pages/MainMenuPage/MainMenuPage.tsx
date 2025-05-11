@@ -34,7 +34,7 @@ const MainMenuPage = () => {
                         className="w-[738px] h-[718px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                         viewBox="0 0 738 718"
                         xmlns="http://www.w3.org/2000/svg"
-                        style={{animation: 'rotateText 20s linear infinite'}}
+                        style={{animation: 'rotateText 40s linear infinite'}}
                     >
                         <defs>
                             <path
