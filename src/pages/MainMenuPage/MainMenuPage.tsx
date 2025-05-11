@@ -68,7 +68,7 @@ const MainMenuPage = () => {
                 />
 
                 <div
-                    className={`absolute top-1/7 left-10 flex flex-col font-bold text-[25px] justify-center gap-1 text-white p-6 px-4 p min-h-fit`}
+                    className={`absolute top-1/10 left-5 flex flex-col font-bold text-[25px] justify-center gap-1 text-white p-6 px-4 p min-h-fit`}
                     style={{
                         textShadow: `
                                     -1px -1px 0 black,
