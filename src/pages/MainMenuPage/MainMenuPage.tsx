@@ -1,4 +1,3 @@
-import useMobile from "../../hooks/useMobile.tsx";
 import Background from "../../assets/stars_black_background.png";
 import planetWithMountains from "../../assets/planet-mountains-background.png"
 import {DetailedIcons} from "../../data/detailedIcons.ts";
@@ -8,16 +7,8 @@ import DurationIcon from '../../assets/duration_icon.png'
 import DateIcon from '../../assets/date_icon.png'
 
 const MainMenuPage = () => {
-    const isMobile = useMobile();
-    const genre = 'комедія';
-    const duration = 'година';
-    const date = '15 травня 2025 року';
 
-    if (!isMobile){
-        //some code
-    }
-
-    return(
+    return (
         <div
             className="m-0 p-0 w-full min-h-screen z-0 bg-repeat"
             style={{
@@ -25,34 +16,41 @@ const MainMenuPage = () => {
                 backgroundSize: 'auto'
             }}
         >
-            <img src={planetWithMountains} alt="planets" className="w-full"/>
+            <img
+                src={planetWithMountains}
+                alt="planets"
+                className="w-full h-auto object-cover"
+            />
 
-            <div className={`absolute w-full flex flex-col justify-center bottom-5 min-h-fit px-14`}>
+            <div className="absolute w-full flex flex-col items-center bottom-4 px-4 sm:px-8 md:px-14">
 
-                <div className={`w-auto flex flex-col justify-center gap-4 mb-14 p-6 px-4 p min-h-fit rounded-[2rem] bg-white/50 shadow-[0px_4px_8.7px_5px_rgba(255,255,255,0.25)]`}>
-                    <div className={`w-fit flex items-end gap-4 font-playFont`}>
-                        <img src={GenreIcon} alt={'img'} className={`h-[25px]`}/>
-                        <h1 className={`uppercase w-fit text-[13px]`}>жанр: <span className={`text-[21px]`}>{genre}</span></h1>
+                <div className="w-[85%] max-w-xl flex flex-col gap-4 mb-10 p-4 sm:p-6 rounded-2xl bg-white/50 shadow-[0px_4px_8.7px_5px_rgba(255,255,255,0.25)]">
+                    <div className="flex items-end gap-3 font-playFont">
+                        <img src={GenreIcon} alt="жанр" className="h-6 sm:h-[25px]" />
+                        <h1 className="uppercase text-xs sm:text-sm">
+                            жанр: <span className="text-lg sm:text-xl">комедія</span>
+                        </h1>
                     </div>
-                    <div className={`w-fit flex items-end gap-4 font-playFont`}>
-                        <img src={DurationIcon} alt={'img'} className={`h-[25px]`}/>
-                        <p className={`uppercase w-fit text-[13px]`}>тривалість: <span className={`text-[21px]`}>{duration}</span> </p>
+                    <div className="flex items-end gap-3 font-playFont">
+                        <img src={DurationIcon} alt="тривалість" className="h-6 sm:h-[25px]" />
+                        <p className="uppercase text-xs sm:text-sm">
+                            тривалість: <span className="text-lg sm:text-xl">година</span>
+                        </p>
                     </div>
-                    <div className={`w-fit flex items-center gap-4 font-playFont`}>
-                        <img src={DateIcon} alt={'img'} className={`h-[25px]`}/>
-                        <h1 className={`uppercase w-fit text-[13px]`}>прем'єра: <span className={`text-[21px]`}>{date}</span></h1>
+                    <div className="flex items-center gap-3 font-playFont">
+                        <img src={DateIcon} alt="дата" className="h-6 sm:h-[25px]" />
+                        <h1 className="uppercase text-xs sm:text-sm">
+                            прем'єра: <span className="text-lg sm:text-xl">15 травня 2025 року</span>
+                        </h1>
                     </div>
                 </div>
 
-                <div
-                    className={`w-full flex flex-wrap justify-between`}>
+                <div className="w-full max-w-4xl flex flex-wrap justify-around gap-4">
                     {DetailedIcons.map((icon, index) => (
                         <MainMenuNavButton key={index} {...icon} />
                     ))}
                 </div>
-
             </div>
-
         </div>
     );
 };
