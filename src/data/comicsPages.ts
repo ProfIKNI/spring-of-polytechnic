@@ -9,6 +9,8 @@ import PhonePage3Part1 from "../assets/comics_phone_page_3_part_01.png";
 import PhonePage3Part2 from "../assets/comics_phone_page_3_part_02.png";
 import PhonePage3Part3 from "../assets/comics_phone_page_3_part_03.png";
 import PhonePage3Part4 from "../assets/comics_phone_page_3_part_04.png";
+import PhoneBlackBg from "../assets/black_bg_phone.png";
+
 import PcPage1Part1 from "../assets/comics_pc_page_1_part_01.png";
 import PcPage1Part2 from "../assets/comics_pc_page_1_part_02.png";
 import PcPage1Part3 from "../assets/comics_pc_page_1_part_03.png";
@@ -20,6 +22,7 @@ import PcPage3Part1 from "../assets/comics_pc_page_3_part_01.png";
 import PcPage3Part2 from "../assets/comics_pc_page_3_part_02.png";
 import PcPage3Part3 from "../assets/comics_pc_page_3_part_03.png";
 import PcPage3Part4 from "../assets/comics_pc_page_3_part_04.png";
+import PcBlackBg from "../assets/black_bg_pc.png";
 
 export interface ComicsPage {
     img?: string;
@@ -53,6 +56,10 @@ export const PhoneComicsPages: ComicsPage[] =[
     {
         img: PhonePage2Part1,
         animated: PhonePage2Part2
+    },
+    {
+        img: PhoneBlackBg,
+        cursor: "top-2/5 left-1/5"
     },
     {
         img: PhonePage3Part1,
@@ -97,6 +104,10 @@ export const PcComicsPages: ComicsPage[] =[
     {
         img: PcPage2Part1,
         animated: PcPage2Part2
+    },
+    {
+        img: PcBlackBg,
+        cursor: "top-1/5 left-2/5"
     },
     {
         img: PcPage3Part1,
