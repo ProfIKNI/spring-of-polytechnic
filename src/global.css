@@ -13,12 +13,12 @@
       0% {
         transform: translateY(100%);
       }
-
+  
       100% {
         transform: translateY(-100%);
       }
     }
-
+  
     .animate-scroll-text {
       animation: scroll-text 60s linear infinite;
     }
@@ -60,23 +60,4 @@
 @keyframes rotateText {
     from { transform: rotate(0deg) }
     to { transform: rotate(360deg) }
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-.animate-marquee {
-    animation-name: marquee;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-.fade-in-up {
-    animation: fadeIn 1s ease-out forwards;
 }
