@@ -29,17 +29,15 @@ const CharactersSlider = () => {
                         <img src={toggleBtn} className={"rotate-[180deg] cursor-pointer"}/>
                     </button>
 
-                    {active >= 0 && (
-                        <div
-                            className={`max-h-[400px] min-w-[100px] text-white flex ${isMobile ? "flex-col" : "flex-row"} ${isMobile && "rounded-[3rem] bg-[rgba(43,45,49,0.5)]"}`}
-                        >
-                            <img
-                                key={characters[active].name}
-                                src={characters[active].img}
-                                className={`h-[400px] fade-in-up`}
-                            />
-                        </div>
-                    )}
+                    <div
+                        className={`max-h-[400px] min-w-[100px] text-white flex ${isMobile ? "flex-col" : "flex-row"} ${isMobile && "rounded-[3rem] bg-[rgba(43,45,49,0.5)]"}`}
+                    >
+                        <img
+                            key={characters[active].name}
+                            src={characters[active].img}
+                            className={`h-[400px] fade-in-up`}
+                        />
+                    </div>
 
 
                     <button onClick={toggleForward} className={"h-fit"}>
