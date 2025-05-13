@@ -7,7 +7,6 @@ import BuyTicketPage from "./pages/BuyTicketPage.tsx";
 import HologramPage from "./pages/HologramPage.tsx";
 import PlanetsPage from "./pages/PlanetsPage/PlanetsPage.tsx";
 import ComicsPage from "./pages/ComicsPage.tsx";
-import ShortDescriptionPage from "./pages/ShortDescriptionPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -29,11 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/spring-of-polytechnic/comics",
     element: <ComicsPage />,
-  },
-  {
-    path: "/spring-of-polytechnic/program",
-    element: <ShortDescriptionPage />,
-  },
+  }
 ]);
 
 createRoot(document.getElementById("root")!).render(

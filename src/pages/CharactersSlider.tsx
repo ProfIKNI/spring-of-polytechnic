@@ -19,11 +19,11 @@ const CharactersSlider = () => {
     };
 
     return(
-        <div className={`flex`}
+        <div className={`flex ${isMobile ? "flex-col" : "flex-row"}`}
              style={{fontFamily: '"Pixelify Sans", sans-serif', fontWeight: 700}}
         >
 
-            <div className={'flex justify-center w-[50%]'}>
+            <div className={`flex justify-center ${!isMobile && "w-[50%]"}`}>
                 <div className={"flex justify-center rounded-[3rem] items-center bg-[rgba(43,45,49,0.5)] w-fit"}>
                     <button onClick={toggleBackward} className={"h-fit"}>
                         <img src={toggleBtn} className={"rotate-[180deg] cursor-pointer"}/>
@@ -44,9 +44,9 @@ const CharactersSlider = () => {
 
             </div>
 
-            <div className={"text-white flex flex-col justify-center items-center w-[50%]"}>
-                <h3>{characters[active].role}</h3>
-                <p>{characters[active].name}</p>
+            <div className={`text-white flex flex-col justify-center items-center ${!isMobile && "w-[50%]"}`}>
+                <h3 className={`${!isMobile ? "text-[40px]" : "text-[20px]"}`}>{characters[active].role}</h3>
+                <p className={`${!isMobile ? "text-[24px]" : "text-[11px]"}`}>{characters[active].name}</p>
             </div>
 
 
