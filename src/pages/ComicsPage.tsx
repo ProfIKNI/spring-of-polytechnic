@@ -94,7 +94,7 @@ const ComicsPage = () => {
 
             {![5, 6, pages.length - 1].includes(activePart) &&
                 <div className={"absolute top-0 left-0 h-screen w-full z-11"} onClick={() => move(1)}></div>}
-            {activePart + 1 >= pages.length && isMobile && <BottomNav/>}
+            {activePart + 1 >= pages.length && <BottomNav/>}
         </>
     );
 };
