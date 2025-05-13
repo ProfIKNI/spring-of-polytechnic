@@ -1,40 +1,38 @@
-import useMobile from "../../hooks/useMobile.tsx";
-import Background from "../../assets/stars_black_background.png";
-import { planets } from '../../data/planets.ts';
-import PlanetBox from "./PlanetBox.tsx";
+
+import Background from "../../assets/bg3.png";
+import BackgroundMobile from "../../assets/bg-mobile2.png";
+import useIsMobile from "../../hooks/useMobile.tsx";
 
 
 const PlanetsPage = () => {
-    const isMobile = useMobile()
+  const isMobile = useIsMobile();
 
-    if (!isMobile) {
-        return (
-            <div className="flex items-center justify-center min-h-screen bg-gray-100 text-center px-4">
-                <div className="bg-white shadow-lg rounded-xl p-6 max-w-md">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                        🚫 Доступ обмежено
-                    </h2>
-                    <p className="text-lg text-gray-700">
-                        Доступно лише з мобільної версії, сонечко ;D
-                    </p>
-                </div>
-            </div>
-        );
-    }
-
+  if (isMobile) {
     return (
-        <div
-            className="m-0 p-0 w-full min-h z-0 bg-repeat"
-            style={{
-                backgroundImage: `url(${Background})`,
-                backgroundSize: 'auto'
-            }}
-        >
-            {planets.map((planet, index) => (
-                <PlanetBox key={index} {...planet} />
-            ))}
-        </div>
+      <div className="m-0 p-0 w-full min-h-screen z-0 bg-repeat">
+    <img
+      src={BackgroundMobile}
+      alt="Background"
+      className="w-full"
+    />
+    
+  </div>
     );
+  }
+
+  return (
+  <div className="m-0 p-0 w-full min-h-screen z-0 bg-repeat">
+    <img
+      src={Background}
+      alt="Background"
+      className="w-full"
+    />
+    
+  </div>
+);
+
+
+
 };
 
 export default PlanetsPage;
