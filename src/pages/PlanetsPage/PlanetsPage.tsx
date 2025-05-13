@@ -1,40 +1,53 @@
-import useMobile from "../../hooks/useMobile.tsx";
-import Background from "../../assets/stars_black_background.png";
-import { planets } from '../../data/planets.ts';
-import PlanetBox from "./PlanetBox.tsx";
+import Starts from "../../assets/stars_black_background.png";
+import Background from "../../assets/bg5.png";
+import BackgroundMobile from "../../assets/bg-mobile2.png";
+import useIsMobile from "../../hooks/useMobile.tsx";
+import RunningRow from "../RunningRow.tsx";
+import CharactersSlider from "../CharactersSlider.tsx";
+import TeamList from "../TeamList.tsx";
+import CharacterList from "../CharacterList.tsx";
+import ShortDesc from "../ShortDesc.tsx";
 
 
 const PlanetsPage = () => {
-    const isMobile = useMobile()
+  const isMobile = useIsMobile();
 
-    if (!isMobile) {
-        return (
-            <div className="flex items-center justify-center min-h-screen bg-gray-100 text-center px-4">
-                <div className="bg-white shadow-lg rounded-xl p-6 max-w-md">
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                        🚫 Доступ обмежено
-                    </h2>
-                    <p className="text-lg text-gray-700">
-                        Доступно лише з мобільної версії, сонечко ;D
-                    </p>
-                </div>
-            </div>
-        );
-    }
+  return (
+  <div className="m-0 p-0 w-full min-h-screen z-0 bg-repeat flex flex-col gap-4"
+       style={{
+         backgroundImage: `url(${Starts})`,
+         backgroundSize: 'auto'
+       }}>
+      <RunningRow text={"Короткий опис"}></RunningRow>
+      
+      <ShortDesc></ShortDesc>
 
-    return (
-        <div
-            className="m-0 p-0 w-full min-h z-0 bg-repeat"
-            style={{
-                backgroundImage: `url(${Background})`,
-                backgroundSize: 'auto'
-            }}
-        >
-            {planets.map((planet, index) => (
-                <PlanetBox key={index} {...planet} />
-            ))}
-        </div>
-    );
+    <RunningRow text={"Головні герої"}></RunningRow>
+
+    <CharactersSlider></CharactersSlider>
+      
+      <RunningRow text={"Дійові особи"}></RunningRow>
+      
+      <CharacterList></CharacterList>
+
+      <RunningRow text={"Вистава в сценах"}></RunningRow>
+
+
+    <img
+      src={Background}
+      alt="Background"
+      className="w-full"
+    />
+
+
+      <RunningRow text={"Команда"}></RunningRow>
+      
+      <TeamList></TeamList>
+  </div>
+);
+
+
+
 };
 
 export default PlanetsPage;
