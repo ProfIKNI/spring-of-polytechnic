@@ -1,14 +1,17 @@
 import Starts from "../../assets/stars_black_background.png";
 import Background from "../../assets/bg.png";
+import BackgroundMobile from "../../assets/bg-mobile.png"
 import RunningRow from "../RunningRow.tsx";
 import CharactersSlider from "../CharactersSlider.tsx";
 import BottomNav from "../BottomNav.tsx";
 import TeamList from "../TeamList.tsx";
 import CharacterList from "../CharacterList.tsx";
 import ShortDesc from "../ShortDesc.tsx";
+import useIsMobile from "../../hooks/useMobile.tsx";
 
 const PlanetsPage = () => {
-
+  const isMobile = useIsMobile();
+  
   return (
   <div className="m-0 p-0 w-full min-h-screen z-0 bg-repeat flex flex-col gap-4"
        style={{
@@ -30,7 +33,7 @@ const PlanetsPage = () => {
     <RunningRow text={" Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах "} key={3}></RunningRow>
 
     <img
-      src={Background}
+      src={isMobile ? BackgroundMobile : Background}
       alt="Background"
       className="w-full"
     />
