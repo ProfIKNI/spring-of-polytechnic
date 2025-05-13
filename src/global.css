@@ -62,21 +62,21 @@
     to { transform: rotate(360deg) }
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-.animate-marquee {
-    animation-name: marquee;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
 .fade-in-up {
     animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes marquee-left-to-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee-ltr {
+    animation: marquee-left-to-right linear infinite;
+    animation-duration: 20s;
+    animation-timing-function: linear;
 }

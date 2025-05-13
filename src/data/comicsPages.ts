@@ -53,10 +53,13 @@ export const PhoneComicsPages: ComicsPage[] =[
     {
         img: PhonePage1Part5
     },
+    {},
     {
         img: PhonePage2Part1,
         animated: PhonePage2Part2
     },
+    {
+        animated: PhonePage2Part2},
     {
         img: PhoneBlackBg,
         cursor: "top-2/5 left-1/5"
@@ -100,6 +103,11 @@ export const PcComicsPages: ComicsPage[] =[
     },
     {
         img: PcPage1Part5
+    },
+    {},
+    {
+        img: PcPage2Part1,
+        animated: PcPage2Part2
     },
     {
         img: PcPage2Part1,

@@ -66,7 +66,7 @@ const ComicsPage = () => {
                     <img src={Cursor} alt="cursor" className={`absolute w-16 h-16 ${pages[activePart].cursor} animate-ping`}/>
                 }
 
-                {(activePart === 5) &&
+                {(activePart === 6) &&
                     <button onClick={() => move(1)}
                             className={`absolute text-white ${isMobile ? "bottom-12 px-6" : "bottom-24 px-10"} left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 bg-[#5625E7] rounded-[0.75rem] py-2 font-bold hover:opacity-80`}>
                         Читати далі
@@ -74,7 +74,7 @@ const ComicsPage = () => {
                     </button>
                 }
 
-                {(activePart === 6) &&
+                {(activePart === 8) &&
                     <div
                         className={`absolute flex ${isMobile ? "flex-col bottom-4 gap-[0.57rem] left-1/2 -translate-x-1/2 px-16" : "flex-row-reverse justify-center bottom-16 gap-[5rem]"} w-full font-bold text-white z-11`}>
                         <button onClick={() => move(1)}
@@ -92,7 +92,7 @@ const ComicsPage = () => {
                 }
             </div>
 
-            {![5, 6, pages.length - 1].includes(activePart) &&
+            {![6, 8, pages.length - 1].includes(activePart) &&
                 <div className={"absolute top-0 left-0 h-screen w-full z-11"} onClick={() => move(1)}></div>}
             {activePart + 1 >= pages.length && <BottomNav/>}
         </>

@@ -2,11 +2,10 @@ import Starts from "../../assets/stars_black_background.png";
 import Background from "../../assets/bg.png";
 import RunningRow from "../RunningRow.tsx";
 import CharactersSlider from "../CharactersSlider.tsx";
+import BottomNav from "../BottomNav.tsx";
 import TeamList from "../TeamList.tsx";
 import CharacterList from "../CharacterList.tsx";
 import ShortDesc from "../ShortDesc.tsx";
-import BottomNav from "../BottomNav.tsx";
-
 
 const PlanetsPage = () => {
 
@@ -16,20 +15,19 @@ const PlanetsPage = () => {
          backgroundImage: `url(${Starts})`,
          backgroundSize: 'auto'
        }}>
-      <RunningRow text={"Короткий опис"}></RunningRow>
-      
+    <RunningRow text={" Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис "} key={1}></RunningRow>
+
       <ShortDesc></ShortDesc>
 
-    <RunningRow text={"Головні герої"}></RunningRow>
+    <RunningRow text={" Головні герої Головні герої Головні герої Головні герої Головні герої Головні герої Головні герої Головні герої "} key={2}></RunningRow>
 
     <CharactersSlider></CharactersSlider>
       
-      <RunningRow text={"Дійові особи"}></RunningRow>
+      <RunningRow text={" Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи "}></RunningRow>
       
       <CharacterList></CharacterList>
 
-      <RunningRow text={"Вистава в сценах"}></RunningRow>
-
+    <RunningRow text={" Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах "} key={3}></RunningRow>
 
     <img
       src={Background}
@@ -42,9 +40,6 @@ const PlanetsPage = () => {
       <BottomNav />
   </div>
 );
-
-
-
 };
 
 export default PlanetsPage;
