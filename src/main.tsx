@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/spring-of-polytechnic/comics",
     element: <ComicsPage />,
-  }
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(
