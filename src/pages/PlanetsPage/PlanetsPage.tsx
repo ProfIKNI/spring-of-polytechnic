@@ -1,16 +1,14 @@
 import Starts from "../../assets/stars_black_background.png";
-import Background from "../../assets/bg5.png";
-import BackgroundMobile from "../../assets/bg-mobile2.png";
-import useIsMobile from "../../hooks/useMobile.tsx";
+import Background from "../../assets/bg.png";
 import RunningRow from "../RunningRow.tsx";
 import CharactersSlider from "../CharactersSlider.tsx";
 import TeamList from "../TeamList.tsx";
 import CharacterList from "../CharacterList.tsx";
 import ShortDesc from "../ShortDesc.tsx";
+import BottomNav from "../BottomNav.tsx";
 
 
 const PlanetsPage = () => {
-  const isMobile = useIsMobile();
 
   return (
   <div className="m-0 p-0 w-full min-h-screen z-0 bg-repeat flex flex-col gap-4"
@@ -39,10 +37,9 @@ const PlanetsPage = () => {
       className="w-full"
     />
 
-
       <RunningRow text={"Команда"}></RunningRow>
-      
       <TeamList></TeamList>
+      <BottomNav />
   </div>
 );
 

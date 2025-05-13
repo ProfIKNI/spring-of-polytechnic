@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
 const RunningRow = ({ text = '' }) => {
-    const textRef = useRef(null);
+    const textRef = useRef<HTMLSpanElement>(null);
     const [repeatCount, setRepeatCount] = useState(1);
-    const [textWidth, setTextWidth] = useState(0);
     const duration = innerWidth < 480 ? 10 : 20;
 
     useEffect(() => {
@@ -11,7 +10,6 @@ const RunningRow = ({ text = '' }) => {
             const width = textRef.current.offsetWidth;
             const screenWidth = window.innerWidth;
             const count = Math.ceil(screenWidth / width) + 6;
-            setTextWidth(width);
             setRepeatCount(count);
         }
     }, [text]);

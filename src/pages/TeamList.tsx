@@ -122,7 +122,7 @@ const teamData: TeamMember[] = [
 const TeamList: React.FC = () => {
       const isMobile = useMobile();
   return (
-    <div className={`team-list text-white ${!isMobile ? "text-[21px] mx-[80px] my-[30px]" : "text-[14px] m-[30px] text-justify"}`}>
+    <div className={`team-list  text-white ${!isMobile ? "text-[21px] mx-[80px] my-[30px] mb-30" : "text-[14px] m-[30px] text-justify"}`}>
       {teamData.map((member, index) => (
         <div key={index} className="mb-3 text-base leading-relaxed">
           <span className="font-bold">{member.role}:</span>{' '}

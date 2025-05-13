@@ -68,7 +68,7 @@ const ComicsPage = () => {
 
                 {(activePart === 5) &&
                     <button onClick={() => move(1)}
-                            className={`absolute text-white ${isMobile ? "bottom-12 px-6" : "bottom-24 px-10"} left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 bg-[#5625E7] rounded-[0.75rem] py-2 font-bold`}>
+                            className={`absolute text-white ${isMobile ? "bottom-12 px-6" : "bottom-24 px-10"} left-1/2 -translate-x-1/2 flex items-center justify-center gap-2 bg-[#5625E7] rounded-[0.75rem] py-2 font-bold hover:opacity-80`}>
                         Читати далі
                         <img src={ForwardIcon} alt="Далі" className="w-6 h-6" />
                     </button>
@@ -78,13 +78,13 @@ const ComicsPage = () => {
                     <div
                         className={`absolute flex ${isMobile ? "flex-col bottom-4 gap-[0.57rem] left-1/2 -translate-x-1/2 px-16" : "flex-row-reverse justify-center bottom-16 gap-[5rem]"} w-full font-bold text-white z-11`}>
                         <button onClick={() => move(1)}
-                            className={`flex items-center justify-around gap-2 bg-[#AC0000] rounded-[0.75rem] ${isMobile ? "py-3 px-4" : "w-[20%] py-4"} shadow-[2px_4px_4px_0px_rgba(255,255,255,0.25)]`}>
+                            className={`flex items-center justify-around gap-2 bg-[#AC0000] rounded-[0.75rem] ${isMobile ? "py-3 px-4" : "w-[20%] py-4"} shadow-[2px_4px_4px_0px_rgba(255,255,255,0.25)] hover:opacity-80`}>
                             Читати далі
                             <img src={ForwardIcon} alt="Далі" className="w-6 h-6" />
                         </button>
 
                         <button onClick={() => move(-6)}
-                                className={`flex items-center justify-around gap-2 bg-[#AC0000] rounded-[0.75rem] ${isMobile ? "py-3 px-4" : "w-[20%] py-4"} shadow-[2px_4px_4px_0px_rgba(255,255,255,0.25)]`}>
+                                className={`flex items-center justify-around gap-2 bg-[#AC0000] rounded-[0.75rem] ${isMobile ? "py-3 px-4" : "w-[20%] py-4"} shadow-[2px_4px_4px_0px_rgba(255,255,255,0.25)] hover:opacity-80`}>
                             <img src={BackwardIcon} alt="Назад" className="w-6 h-6"/>
                             Повернутися назад
                         </button>

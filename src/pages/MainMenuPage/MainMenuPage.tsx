@@ -6,9 +6,6 @@ import {DetailedIcons} from "../../data/detailedIcons.ts";
 import MainMenuNavButton from "./MainMenuNavButton.tsx";
 import useMobile from "../../hooks/useMobile.tsx";
 import {Link} from "react-router-dom";
-// import GenreIcon from '../../assets/genre_icon.png'
-// import DurationIcon from '../../assets/duration_icon.png'
-// import DateIcon from '../../assets/date_icon.png'
 
 const MainMenuPage = () => {
     const isMobile = useMobile();
@@ -143,7 +140,6 @@ const MainMenuPage = () => {
                         <span className={`font-normal`}>{date}</span></h1>
                     </div>
                 </div>
-
                 <div
                     className={`w-full flex flex-wrap justify-between mb-8`}>
                     {DetailedIcons.map((icon, index) => (
