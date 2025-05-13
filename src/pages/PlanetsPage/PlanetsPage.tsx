@@ -1,6 +1,5 @@
-
-import Background from "../../assets/bg3.png";
 import Starts from "../../assets/stars_black_background.png";
+import Background from "../../assets/bg5.png";
 import BackgroundMobile from "../../assets/bg-mobile2.png";
 import useIsMobile from "../../hooks/useMobile.tsx";
 import RunningRow from "../RunningRow.tsx";
