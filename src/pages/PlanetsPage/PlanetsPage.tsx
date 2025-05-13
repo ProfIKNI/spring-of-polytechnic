@@ -4,6 +4,9 @@ import BackgroundMobile from "../../assets/bg-mobile2.png";
 import useIsMobile from "../../hooks/useMobile.tsx";
 import RunningRow from "../RunningRow.tsx";
 import CharactersSlider from "../CharactersSlider.tsx";
+import TeamList from "../TeamList.tsx";
+import CharacterList from "../CharacterList.tsx";
+import ShortDesc from "../ShortDesc.tsx";
 
 
 const PlanetsPage = () => {
@@ -15,13 +18,19 @@ const PlanetsPage = () => {
          backgroundImage: `url(${Starts})`,
          backgroundSize: 'auto'
        }}>
-    <RunningRow text={"Короткий опис"}></RunningRow>
+      <RunningRow text={"Короткий опис"}></RunningRow>
+      
+      <ShortDesc></ShortDesc>
 
     <RunningRow text={"Головні герої"}></RunningRow>
 
     <CharactersSlider></CharactersSlider>
+      
+      <RunningRow text={"Дійові особи"}></RunningRow>
+      
+      <CharacterList></CharacterList>
 
-    <RunningRow text={"Вистава в сценах"}></RunningRow>
+      <RunningRow text={"Вистава в сценах"}></RunningRow>
 
 
     <img
@@ -31,6 +40,9 @@ const PlanetsPage = () => {
     />
 
 
+      <RunningRow text={"Команда"}></RunningRow>
+      
+      <TeamList></TeamList>
   </div>
 );
 
