@@ -11,7 +11,7 @@ export const DetailedIcons: DetailedIcon[] = [
     {
         title: "ПРОГРАМКА",
         icon: detailedPlanets,
-        route: "/spring-of-polytechnic/planets"
+        route: "/spring-of-polytechnic/program"
     },
     {
         title: "КОМІКС",
