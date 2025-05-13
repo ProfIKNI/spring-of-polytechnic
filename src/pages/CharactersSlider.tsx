@@ -31,12 +31,12 @@ const CharactersSlider = () => {
 
                     {active >= 0 && (
                         <div
-                            key={characters[active].name}
-                            className={`max-h-[400px] text-white flex ${isMobile ? "flex-col" : "flex-row"} fade-in-up`}
+                            className={`max-h-[400px] min-w-[100px] text-white flex ${isMobile ? "flex-col" : "flex-row"} ${isMobile && "rounded-[3rem] bg-[rgba(43,45,49,0.5)]"}`}
                         >
                             <img
+                                key={characters[active].name}
                                 src={characters[active].img}
-                                className={`h-[400px] ${isMobile && "rounded-[3rem] bg-[rgba(43,45,49,0.5)]"}`}
+                                className={`h-[400px] fade-in-up`}
                             />
                         </div>
                     )}
