@@ -27,7 +27,7 @@ const PlanetsPage = () => {
 
     <CharactersSlider></CharactersSlider>
       
-      <RunningRow text={"Дійові особи"}></RunningRow>
+      <RunningRow text={" Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи Дійові особи "}></RunningRow>
       
       <CharacterList></CharacterList>
 
@@ -41,8 +41,8 @@ const PlanetsPage = () => {
 
       <BottomNav></BottomNav>
 
-      <RunningRow text={"Команда"}></RunningRow>
-      
+      <RunningRow text={" Команда Команда Команда Команда Команда Команда Команда Команда Команда Команда Команда Команда Команда Команда Команда "}></RunningRow>
+
       <TeamList></TeamList>
   </div>
 );
