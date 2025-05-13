@@ -4,6 +4,7 @@ import BackgroundMobile from "../../assets/bg-mobile2.png";
 import useIsMobile from "../../hooks/useMobile.tsx";
 import RunningRow from "../RunningRow.tsx";
 import CharactersSlider from "../CharactersSlider.tsx";
+import BottomNav from "../BottomNav.tsx";
 import TeamList from "../TeamList.tsx";
 import CharacterList from "../CharacterList.tsx";
 import ShortDesc from "../ShortDesc.tsx";
@@ -18,11 +19,11 @@ const PlanetsPage = () => {
          backgroundImage: `url(${Starts})`,
          backgroundSize: 'auto'
        }}>
-      <RunningRow text={"Короткий опис"}></RunningRow>
-      
+    <RunningRow text={" Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис Короткий опис "} key={1}></RunningRow>
+
       <ShortDesc></ShortDesc>
 
-    <RunningRow text={"Головні герої"}></RunningRow>
+    <RunningRow text={" Головні герої Головні герої Головні герої Головні герої Головні герої Головні герої Головні герої Головні герої "} key={2}></RunningRow>
 
     <CharactersSlider></CharactersSlider>
       
@@ -30,8 +31,7 @@ const PlanetsPage = () => {
       
       <CharacterList></CharacterList>
 
-      <RunningRow text={"Вистава в сценах"}></RunningRow>
-
+    <RunningRow text={" Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах "} key={3}></RunningRow>
 
     <img
       src={Background}
@@ -39,15 +39,13 @@ const PlanetsPage = () => {
       className="w-full"
     />
 
+      <BottomNav></BottomNav>
 
       <RunningRow text={"Команда"}></RunningRow>
       
       <TeamList></TeamList>
   </div>
 );
-
-
-
 };
 
 export default PlanetsPage;
