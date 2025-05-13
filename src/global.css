@@ -77,4 +77,6 @@
     animation-iteration-count: infinite;
 }
 
-
+.fade-in-up {
+    animation: fadeIn 1s ease-out forwards;
+}

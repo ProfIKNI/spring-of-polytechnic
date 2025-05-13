@@ -24,18 +24,23 @@ const CharactersSlider = () => {
         >
 
             <div className={`flex justify-center ${!isMobile && "w-[50%]"}`}>
-                <div className={"flex justify-center rounded-[3rem] items-center bg-[rgba(43,45,49,0.5)] w-fit"}>
+                <div className={`flex justify-center ${!isMobile && "rounded-[3rem] bg-[rgba(43,45,49,0.5)]"} items-center w-fit`}>
                     <button onClick={toggleBackward} className={"h-fit"}>
                         <img src={toggleBtn} className={"rotate-[180deg] cursor-pointer"}/>
                     </button>
 
-                    {active >= 0 &&
-                        <div key={characters[active].name}
-                             className={`max-h-[400px] text-white flex ${isMobile ? "flex-col" : " flex-row"}`}
+                    {active >= 0 && (
+                        <div
+                            key={characters[active].name}
+                            className={`max-h-[400px] text-white flex ${isMobile ? "flex-col" : "flex-row"} fade-in-up`}
                         >
-                            <img src={characters[active].img} className={"h-[400px]"}/>
+                            <img
+                                src={characters[active].img}
+                                className={`h-[400px] ${isMobile && "rounded-[3rem] bg-[rgba(43,45,49,0.5)]"}`}
+                            />
                         </div>
-                    }
+                    )}
+
 
                     <button onClick={toggleForward} className={"h-fit"}>
                         <img src={toggleBtn} className={"cursor-pointer"}/>
@@ -44,7 +49,7 @@ const CharactersSlider = () => {
 
             </div>
 
-            <div className={`text-white flex flex-col justify-center items-center ${!isMobile && "w-[50%]"}`}>
+            <div className={`text-white flex flex-col justify-center items-center ${!isMobile && "w-[50%]"} fade-in-up`} key={characters[active].role}>
                 <h3 className={`${!isMobile ? "text-[40px]" : "text-[20px]"}`}>{characters[active].role}</h3>
                 <p className={`${!isMobile ? "text-[24px]" : "text-[11px]"}`}>{characters[active].name}</p>
             </div>

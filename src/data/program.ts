@@ -18,7 +18,7 @@ export const Characters: Character[] = [
     },
     {
         role: "Помічник Дейв",
-        name: "Стас Мінтус, ПЗ-3, ІКНІ",
+        name: "Стас Мінтус, ПЗ-33, ІКНІ",
         img: stasik
     },
     {
