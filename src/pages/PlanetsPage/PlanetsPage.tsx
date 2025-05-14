@@ -11,7 +11,8 @@ import useIsMobile from "../../hooks/useMobile.tsx";
 
 const PlanetsPage = () => {
   const isMobile = useIsMobile();
-  
+  const bg = isMobile ? BackgroundMobile : Background
+
   return (
   <div className="m-0 p-0 w-full min-h-screen z-0 bg-repeat flex flex-col gap-4"
        style={{
@@ -33,7 +34,7 @@ const PlanetsPage = () => {
     <RunningRow text={" Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах Вистава в сценах "} key={3}></RunningRow>
 
     <img
-      src={isMobile ? BackgroundMobile : Background}
+      src={bg}
       alt="Background"
       className="w-full"
     />
