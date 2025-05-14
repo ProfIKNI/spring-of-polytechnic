@@ -16,7 +16,7 @@ const MainMenuPage = () => {
     if (!isMobile){
         return (
             <div
-                className="m-0 p-0 w-full min-h-screen z-0 bg-repeat overflow-y-hidden font-playFont"
+                className="m-0 p-0 w-full min-h-screen z-0 bg-repeat overflow-y-hidden font-playFont max-h-[100vh]"
                 style={{
                     backgroundImage: `url(${Background})`,
                     backgroundSize: 'auto'
