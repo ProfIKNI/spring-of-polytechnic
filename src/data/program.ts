@@ -32,3 +32,4 @@ export const Characters: Character[] = [
         img: dima
     },
 ]
+
