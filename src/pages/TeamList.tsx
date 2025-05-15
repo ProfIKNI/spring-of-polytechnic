@@ -9,17 +9,17 @@ interface TeamMember {
 const teamData: TeamMember[] = [
   {
     role: 'Режисер',
-    names: ['Мартиняк Ярослав, НН-406, ІКНІ']
+    names: ['Мартиняк Ярослав, КН-406, ІКНІ']
   },
   {
     role: 'Сценаристи',
     names: [
-      'Мартиняк Ярослав, НН-406, ІКНІ',
+      'Мартиняк Ярослав, КН-406, ІКНІ',
       'Мінтус Станіслав, ПЗ-33, ІКНІ',
       'Кріслатий Дмитро, ПМ-43, ІМФН',
       'Лесяк Роман, ПМ-22, ІМФН',
       'Коломійчук Данило, КНСП-11, ІКНІ',
-      'Сафвас Нестор, УП-11, ІКНІ',
+      'Сарвас Нестор, УП-11, ІКНІ',
     ]
   },
   {
@@ -70,7 +70,7 @@ const teamData: TeamMember[] = [
     names: [
       'Письмак Владислав, ОІ-12, ІКНІ',
       'Подухайло Денис, ПП-12, ІКНІ',
-      'Барчук Анна-Вікторія,  ФЛ-43, ІКНІ',
+      'Барчук Анна-Вікторія, ФЛ-43, ІКНІ',
       'Лугова Ольга, ПТ-11, ІСТР',
       'Гвоздовська Софія, ПМ-13, ІМФН',
       'Пойта Анна, ПП-25, ІКНІ',
@@ -122,14 +122,21 @@ const teamData: TeamMember[] = [
 const TeamList: React.FC = () => {
       const isMobile = useMobile();
   return (
-    <div className={`team-list  text-white ${!isMobile ? "text-[21px] mx-[80px] my-[30px] mb-30" : "text-[14px] m-[30px] text-justify"}`}>
-      {teamData.map((member, index) => (
-        <div key={index} className="mb-3 text-base leading-relaxed">
-          <span className="font-bold">{member.role}:</span>{' '}
-          {member.names.join('; ')}
-        </div>
-      ))}
-    </div>
+      <div
+          className={`team-list  text-white ${!isMobile ? "text-[21px] mx-[80px] my-[30px] mb-30" : "text-[14px] m-[30px] text-justify"}`}>
+        {teamData.map((member, index) => (
+            <div key={index} className="mb-3 text-base leading-relaxed">
+              <span className="font-bold">{member.role}:</span>{' '}
+              {member.names.join('; ')}
+            </div>
+        ))}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
   );
 };
 
